@@ -16,7 +16,7 @@
     "core-js": "^2.4",
     "react": "^15.3",
     "react-dom": "^15.3",
-    "react-joyride": "^1.4"
+    "react-joyride": "git+https://git@github.com/xveganxxxedgex/react-joyride.git"
   },
   "devDependencies": {
     "babel-eslint": "^6.1",

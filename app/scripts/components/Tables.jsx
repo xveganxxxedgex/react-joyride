@@ -6,19 +6,28 @@ class Tables extends React.Component {
   }
 
   componentDidMount() {
-    this.props.addSteps({
-      title: 'Tooltip Position',
-      text: 'Relative position of you beacon and tooltip. It can be one of these:`top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `right` and `left`. This defaults to `top`.',
-      selector: '.transactions',
-      position: 'top-right',
-      style: {
-        mainColor: '#f07b50',
-        beacon: {
-          inner: '#f07b50',
-          outer: '#f07b50'
+    this.props.addSteps([
+      {
+        title: 'Tooltip Position',
+        text: 'Relative position of you beacon and tooltip. It can be one of these:`top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `right` and `left`. This defaults to `top`.',
+        selector: '.transactions',
+        position: 'top-right',
+        style: {
+          mainColor: '#f07b50',
+          beacon: {
+            inner: '#f07b50',
+            outer: '#f07b50'
+          }
         }
+      },
+      {
+        title: 'Custom Scroll Parent',
+        text: 'Parent container that should scroll when target is out of view.',
+        selector: '.bottom-item',
+        position: 'top-right',
+        scrollContainerSelector: '.scroll-parent'
       }
-    });
+    ]);
 
     setTimeout(() => {
       this.props.addSteps({
@@ -41,7 +50,7 @@ class Tables extends React.Component {
                   <i className="fa fa-clock-o fa-fw" /> Tasks Panel
                 </h3>
               </div>
-              <div className="card-block">
+              <div className="card-block scroll-parent">
                 <ul className="list-group">
                   <li className="list-group-item">
                     <span className="label label-pill label-default pull-right">just now</span>
@@ -103,7 +112,7 @@ class Tables extends React.Component {
                     <span className="label label-pill label-default pull-right">yesterday</span>
                     <i className="fa fa-fw fa-globe" /> Saved the world
                   </li>
-                  <li className="list-group-item">
+                  <li className="list-group-item bottom-item">
                     <span className="label label-pill label-default pull-right">two days ago</span>
                     <i className="fa fa-fw fa-check" /> Completed task: "fix error on sales page"
                   </li>
