@@ -67,6 +67,7 @@
     "jest-cli": "^18.1",
     "jsdom": "^9.9",
     "nightwatch": "^0.9",
+    "prop-types": "^15.5.10",
     "react": "^15.4",
     "react-addons-test-utils": "^15.4",
     "react-dom": "^15.4",
