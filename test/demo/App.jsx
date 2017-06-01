@@ -177,10 +177,10 @@ export default class Demo extends React.Component {
   }
 
   render() {
-    let sampleProjects = [];
-    let contentRows = [];
+    const sampleProjects = [];
+    const contentRows = [];
     for (let i = 4; i <= 10; i++) {
-      contentRows.push(<td key={'content_' + i}>Content {i}</td>);
+      contentRows.push(<td key={`content_${i}`}>Content {i}</td>);
     }
 
     for (let i = 1; i <= 15; i++) {
@@ -188,7 +188,7 @@ export default class Demo extends React.Component {
         <tr key={i}>
           <td>Test Project {i}</td>
           <td>Leon Kennedy</td>
-          <td>01-01-20{i < 10 ? '0' + i : i}</td>
+          <td>01-01-20{i < 10 ? `0${i}` : i}</td>
           {contentRows}
         </tr>
       );

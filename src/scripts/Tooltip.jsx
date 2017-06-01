@@ -13,6 +13,7 @@ export default class JoyrideTooltip extends React.Component {
     animate: PropTypes.bool.isRequired,
     buttons: PropTypes.object.isRequired,
     disableOverlay: PropTypes.bool,
+    hideCloseButton: PropTypes.bool,
     holePadding: PropTypes.number,
     onClick: PropTypes.func.isRequired,
     onRender: PropTypes.func.isRequired,
@@ -378,7 +379,7 @@ export default class JoyrideTooltip extends React.Component {
   };
 
   render() {
-    const { buttons, disableOverlay, onClick, selector, showOverlay, step, target, type } = this.props;
+    const { buttons, disableOverlay, onClick, selector, showOverlay, step, target, type, hideCloseButton } = this.props;
 
     if (!target) {
       return undefined;
@@ -432,12 +433,14 @@ export default class JoyrideTooltip extends React.Component {
         <div
           className={`joyride-tooltip__triangle joyride-tooltip__triangle-${opts.positionClass}`}
           style={styles.arrow} />
-        <a
-          href="#"
-          className={`joyride-tooltip__close${(output.header ? ' joyride-tooltip__close--header' : '')}`}
-          style={styles.buttons.close}
-          data-type="close"
-          onClick={onClick}>×</a>
+        {!hideCloseButton &&
+          <a
+            href="#"
+            className={`joyride-tooltip__close${(output.header ? ' joyride-tooltip__close--header' : '')}`}
+            style={styles.buttons.close}
+            data-type="close"
+            onClick={onClick}>×</a>
+        }
         {output.header}
         {output.main}
         <div className="joyride-tooltip__footer">

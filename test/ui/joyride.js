@@ -170,7 +170,7 @@ module.exports = {
   'Footer - should be able to close the tooltip': function(browser) {
     browser
       .pause(pause)
-      .click('.joyride-tooltip__button--primary')
+      .click('.joyride-tooltip__button--primary');
   },
 
   'Scroll Container First Project Completed Date - should be able to see the tooltip UI': function(browser) {
@@ -181,13 +181,13 @@ module.exports = {
       .assert.cssProperty('.joyride-tooltip', 'left', '296px')
       .assert.cssProperty('.joyride-tooltip', 'width', '450px')
       .assert.cssProperty('.joyride-tooltip', 'height', '155px')
-      .assert.containsText('.joyride-tooltip__main', "This is when the first project was completed");
+      .assert.containsText('.joyride-tooltip__main', 'This is when the first project was completed');
   },
 
   'Scroll Container First Project Completed Date - should be able to close the tooltip': function(browser) {
     browser
       .pause(pause)
-      .click('.joyride-tooltip__button--primary')
+      .click('.joyride-tooltip__button--primary');
   },
 
   'Scroll Container Mid Random Content - should be able to see the tooltip UI': function(browser) {
@@ -198,13 +198,13 @@ module.exports = {
       .assert.cssProperty('.joyride-tooltip', 'left', '404px')
       .assert.cssProperty('.joyride-tooltip', 'width', '450px')
       .assert.cssProperty('.joyride-tooltip', 'height', '155px')
-      .assert.containsText('.joyride-tooltip__main', "Target a cell near the end to scroll the child container down and to the right");
+      .assert.containsText('.joyride-tooltip__main', 'Target a cell near the end to scroll the child container down and to the right');
   },
 
   'Scroll Container Mid Random Content - should be able to close the tooltip': function(browser) {
     browser
       .pause(pause)
-      .click('.joyride-tooltip__button--primary')
+      .click('.joyride-tooltip__button--primary');
   },
 
   'Scroll Container Last Project - should be able to see the tooltip UI': function(browser) {
@@ -215,13 +215,13 @@ module.exports = {
       .assert.cssProperty('.joyride-tooltip', 'left', '121px')
       .assert.cssProperty('.joyride-tooltip', 'width', '450px')
       .assert.cssProperty('.joyride-tooltip', 'height', '155px')
-      .assert.containsText('.joyride-tooltip__main', "Select a cell towards the front of the table to scroll the child down and to the left");
+      .assert.containsText('.joyride-tooltip__main', 'Select a cell towards the front of the table to scroll the child down and to the left');
   },
 
   'Scroll Container Last Project - should be able to close the tooltip': function(browser) {
     browser
       .pause(pause)
-      .click('.joyride-tooltip__button--primary')
+      .click('.joyride-tooltip__button--primary');
   },
 
   'Scroll Container Last Project - Next Cell - should be able to see the tooltip UI': function(browser) {
@@ -232,7 +232,7 @@ module.exports = {
       .assert.cssProperty('.joyride-tooltip', 'left', '213px')
       .assert.cssProperty('.joyride-tooltip', 'width', '450px')
       .assert.cssProperty('.joyride-tooltip', 'height', '155px')
-      .assert.containsText('.joyride-tooltip__main', "Since this should already be in view, the container should not have scrolled");
+      .assert.containsText('.joyride-tooltip__main', 'Since this should already be in view, the container should not have scrolled');
   },
 
   'Scroll Container Last Project - Next Cell - should be able to close the tooltip': function(browser) {

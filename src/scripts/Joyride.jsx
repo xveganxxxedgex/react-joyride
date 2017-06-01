@@ -60,6 +60,7 @@ class Joyride extends React.Component {
     callback: PropTypes.func,
     debug: PropTypes.bool,
     disableOverlay: PropTypes.bool,
+    hideCloseButton: PropTypes.bool,
     holePadding: PropTypes.number,
     keyboardNavigation: PropTypes.bool,
     locale: PropTypes.object,
@@ -83,6 +84,7 @@ class Joyride extends React.Component {
     allowClicksThruHole: false,
     autoStart: false,
     debug: false,
+    hideCloseButton: false,
     holePadding: 5,
     keyboardNavigation: true,
     locale: {
@@ -1259,6 +1261,7 @@ class Joyride extends React.Component {
     const { index, shouldRedraw, shouldRenderTooltip, standaloneData, xPos, yPos } = this.state;
     const {
       disableOverlay,
+      hideCloseButton,
       holePadding,
       locale,
       showBackButton,
@@ -1332,6 +1335,7 @@ class Joyride extends React.Component {
         animate: xPos > -1 && !shouldRedraw,
         buttons,
         disableOverlay,
+        hideCloseButton,
         holePadding,
         position,
         selector: sanitizeSelector(step.selector),
