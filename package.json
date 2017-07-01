@@ -22,7 +22,7 @@
     "react": "^15.4",
     "react-dom": "^15.4",
     "react-inlinesvg": "^0.5",
-    "react-joyride": "^1.10",
+    "react-joyride": "git+https://git@github.com/xveganxxxedgex/react-joyride.git#feature/scroll-child",
     "sass-mediaqueries": "^1.6"
   },
   "devDependencies": {

@@ -156,19 +156,28 @@ class Tables extends React.Component {
   }
 
   componentDidMount() {
-    this.props.addSteps({
-      title: 'Tooltip Position',
-      text: 'Relative position of you beacon and tooltip. It can be one of these:`top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `right` and `left`. This defaults to `top`.',
-      selector: '.transactions',
-      position: 'top-right',
-      style: {
-        mainColor: '#f07b50',
-        beacon: {
-          inner: '#f07b50',
-          outer: '#f07b50',
+    this.props.addSteps([
+      {
+        title: 'Tooltip Position',
+        text: 'Relative position of you beacon and tooltip. It can be one of these:`top`, `top-left`, `top-right`, `bottom`, `bottom-left`, `bottom-right`, `right` and `left`. This defaults to `top`.',
+        selector: '.transactions',
+        position: 'top-right',
+        style: {
+          mainColor: '#f07b50',
+          beacon: {
+            inner: '#f07b50',
+            outer: '#f07b50',
+          },
         },
       },
-    });
+      {
+        title: 'Scroll Child Elements',
+        text: 'Steps can scroll to their specified parent element. Use the `parentScrollSelector` field in the step settings.',
+        selector: '.transactions tr:nth-child(9) td:nth-child(2)',
+        parentScrollSelector: '.transactions .card-block',
+        position: 'top'
+      }
+    ]);
 
     setTimeout(() => {
       this.props.addSteps({
