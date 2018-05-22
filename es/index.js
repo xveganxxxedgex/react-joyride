@@ -2101,6 +2101,10 @@ var Joyride = function (_React$Component) {
 
     var _this = possibleConstructorReturn(this, (Joyride.__proto__ || Object.getPrototypeOf(Joyride)).call(this, props));
 
+    _this.reset = function () {
+      _this.store.reset();
+    };
+
     _this.callback = function (data) {
       var callback = _this.props.callback;
 
