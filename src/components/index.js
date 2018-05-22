@@ -333,6 +333,10 @@ class Joyride extends React.Component {
     }
   }
 
+  reset = () => {
+    this.store.reset();
+  }
+
   /**
    * Trigger the callback.
    *
