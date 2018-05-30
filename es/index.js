@@ -2333,7 +2333,6 @@ var Joyride = function (_React$Component) {
       var isYAxis = axis === 'y';
       var rectStart = isYAxis ? 'top' : 'left';
       var rectEnd = isYAxis ? 'bottom' : 'right';
-      var edgeSides = isYAxis ? ['top', 'right'] : ['left', 'top'];
 
       if (lifecycle === LIFECYCLE.BEACON && this.beaconPopper) {
         var _beaconPopper = this.beaconPopper,
@@ -2351,7 +2350,7 @@ var Joyride = function (_React$Component) {
             _popper = _tooltipPopper.popper;
 
 
-        if (edgeSides.indexOf(_placement) !== -1 && !flipped && !hasCustomScroll) {
+        if (_placement === rectStart && !flipped) {
           scrollValue = Math.floor(_popper[rectStart] - scrollOffset);
         } else if (scrollValue - step.spotlightPadding >= 0) {
           scrollValue -= step.spotlightPadding;

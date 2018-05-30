@@ -254,7 +254,6 @@ class Joyride extends React.Component {
     const isYAxis = axis === 'y';
     const rectStart = isYAxis ? 'top' : 'left';
     const rectEnd = isYAxis ? 'bottom' : 'right';
-    const edgeSides = isYAxis ? ['top', 'right'] : ['left', 'top'];
 
     if (lifecycle === LIFECYCLE.BEACON && this.beaconPopper) {
       const { placement, popper } = this.beaconPopper;
@@ -266,7 +265,7 @@ class Joyride extends React.Component {
     else if (lifecycle === LIFECYCLE.TOOLTIP && this.tooltipPopper) {
       const { flipped, placement, popper } = this.tooltipPopper;
 
-      if (edgeSides.includes(placement) && !flipped && !hasCustomScroll) {
+      if (placement === rectStart && !flipped) {
         scrollValue = Math.floor(popper[rectStart] - scrollOffset);
       }
       else if (scrollValue - step.spotlightPadding >= 0) {
